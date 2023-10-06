@@ -1,2 +1,3 @@
-# nf_sandbox
-Nextflow sandbox
+# Nextflow Sandbox Repository
+
+Playing with Nextflow!
