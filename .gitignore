@@ -163,4 +163,4 @@ cython_debug/
 .nextflow/
 .nextflow.pid
 *.config
-*.nextflow.log.*
+*.nextflow.log*

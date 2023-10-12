@@ -1,5 +1,3 @@
-#!/usr/bin/env nextflow
-
 params.str = 'Hello world!'
 
 process splitLetters {
@@ -18,11 +16,27 @@ process convertToUpper {
     stdout
 
   """
-  rev $x
-  # cat $x | tr '[a-z]' '[A-Z]'
+  # rev $x
+  cat $x | tr '[a-z]' '[A-Z]'
   """
 }
 
 workflow {
   splitLetters | flatten | convertToUpper | view { it.trim() }
+}
+
+workflow.onComplete {
+
+    def msg = """\
+        Pipeline execution summary 
+        --------------------------- 
+        Completed at: ${workflow.complete}
+        Duration    : ${workflow.duration}
+        Success     : ${workflow.success}
+        workDir     : ${workflow.workDir}
+        exit status : ${workflow.exitStatus}
+        """
+        .stripIndent()
+
+    sendMail(to: 'sayarenedennis@northwestern.edu', subject: 'nextflow-tutorial-job', body: msg)
 }
