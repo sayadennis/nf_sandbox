@@ -2,6 +2,10 @@
 
 Playing with Nextflow!
 
+## Hello World
+
+The first test is a simple "Hello World" example. Workflow is in `code/helloworld.nf`, which is submitted to the HPC scheduler (slurm) with `code/helloworld.sh`.
+
 ## Test 1: downloading and playing with TCGA data
 
 Query in the "Exploration" page of GDC Data Portal:

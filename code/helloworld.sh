@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -A b1042
-#SBATCH -p genomics
+#SBATCH -A p30791
+#SBATCH -p short
 #SBATCH -t 00:10:00
 #SBATCH -N 1
 #SBATCH -n 1
@@ -15,4 +15,4 @@ module load nextflow/22.04.4
 
 cd ~/nf_sandbox/code/
 
-nextflow run -work-dir /projects/b1131/saya/nf_sandbox/nf_workdir tutorial.nf
+nextflow run -work-dir /projects/b1131/saya/nf_sandbox/nf_workdir helloworld.nf
