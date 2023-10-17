@@ -38,5 +38,5 @@ workflow.onComplete {
         """
         .stripIndent()
 
-    sendMail(to: 'sayarenedennis@northwestern.edu', subject: 'nextflow-tutorial-job', body: msg)
+    sendMail(to: 'sayarenedennis@northwestern.edu', subject: 'nextflow-helloworld-job', body: msg)
 }
